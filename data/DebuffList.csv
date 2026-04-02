@@ -1,0 +1,7 @@
+﻿id,name,color_grade,description,picture_path,category,curse_point
+0,雷数加一,white,永久增加雷数1,0,0,1
+1,测试name,white,测试代码使用,0,0,1
+2,不定雷,white,每轮雷数为原雷数+（-20到+20的一个数）,0,0,1
+3,金币减持,white,金币减少20,0,0,1
+4,扣血,white,减少1点生命,0,0,1
+5,线索减一,blue,永久减少线索1,0,0,2

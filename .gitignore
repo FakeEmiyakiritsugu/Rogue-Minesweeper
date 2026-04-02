@@ -1,0 +1,16 @@
+# Godot 引擎自动生成的缓存目录（必须忽略）
+.godot/
+
+# 资源导入缓存文件（自动生成，每次打开引擎都会重建）
+*.import
+
+# 导出/打包输出文件夹（你导出 exe、apk 会在这里）
+export/
+Export/
+build/
+Build/
+bin/
+Bin/
+
+# 日志文件
+*.log

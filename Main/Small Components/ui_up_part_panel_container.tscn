@@ -1,0 +1,36 @@
+[gd_scene load_steps=2 format=3 uid="uid://7ukttxhyrj6w"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_71dl3"]
+bg_color = Color(0.254902, 0.188235, 0.588235, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.176471, 0.345098, 0.231373, 1)
+
+[node name="UiUpPartPanelContainer" type="PanelContainer"]
+custom_minimum_size = Vector2(165, 40)
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_71dl3")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Text" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "问号格数量："
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "001"
+horizontal_alignment = 1
+vertical_alignment = 1

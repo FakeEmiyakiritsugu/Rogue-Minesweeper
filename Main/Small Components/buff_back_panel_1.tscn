@@ -1,0 +1,94 @@
+[gd_scene load_steps=3 format=3 uid="uid://bjeilbyr56o7t"]
+
+[ext_resource type="Texture2D" uid="uid://xudm7bwd5ipr" path="res://icon.svg" id="1_icrlc"]
+[ext_resource type="Script" path="res://scripts/buff_back_panel_1.gd" id="1_iocrt"]
+
+[node name="BuffBackPanel1" type="Panel"]
+custom_minimum_size = Vector2(130, 200)
+offset_right = 120.0
+offset_bottom = 200.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_iocrt")
+
+[node name="BuffVBoxContainer2" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 1
+offset_right = 130.0
+offset_bottom = 200.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="BuffVBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="BuffImagePanel" type="Panel" parent="BuffVBoxContainer2/HBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="BuffImage" type="TextureRect" parent="BuffVBoxContainer2/HBoxContainer/BuffImagePanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -25.0
+offset_right = 26.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+texture = ExtResource("1_icrlc")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BuffVBoxContainer2/HBoxContainer"]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+
+[node name="BuffnameLabel" type="RichTextLabel" parent="BuffVBoxContainer2/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 12
+text = "测试名称
+"
+
+[node name="BuffnameLabel1" type="Label" parent="BuffVBoxContainer2/HBoxContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 12
+text = "测试名称"
+
+[node name="BuffTypeLabel" type="Label" parent="BuffVBoxContainer2/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 12
+text = "测试类别"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="BuffVBoxContainer2"]
+custom_minimum_size = Vector2(130, 100)
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 12
+text = "测试装备效果"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="BuffVBoxContainer2"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="BuffVBoxContainer2/HBoxContainer2"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 12
+text = "价格："
+horizontal_alignment = 1
+
+[node name="PriceButton" type="Button" parent="BuffVBoxContainer2/HBoxContainer2"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+text = "20
+"
+
+[connection signal="pressed" from="BuffVBoxContainer2/HBoxContainer2/PriceButton" to="." method="_on_price_button_pressed"]

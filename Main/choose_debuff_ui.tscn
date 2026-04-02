@@ -1,0 +1,1142 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcnca6tqbs4sw"]
+
+[ext_resource type="Script" path="res://scripts/choose_debuff_ui.gd" id="1_d333p"]
+[ext_resource type="Texture2D" uid="uid://xudm7bwd5ipr" path="res://icon.svg" id="2_vliyf"]
+
+[node name="ChooseDebuffUI" type="CanvasLayer"]
+script = ExtResource("1_d333p")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -466.0
+offset_top = -3.0
+offset_right = 94.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Panel4" type="Panel" parent="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(240, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="TextFixedDebuffShop" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer/Panel4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -108.0
+offset_top = -21.0
+offset_right = 108.0
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 30
+text = "固定增加debuff"
+
+[node name="Panel" type="Panel" parent="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(70, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="TextShopLevel" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -11.0
+offset_right = 37.5
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 15
+text = "商店等级："
+
+[node name="Panel3" type="Panel" parent="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(20, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="EquipShopLevel" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer/Panel3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.5
+offset_top = -11.0
+offset_right = 4.5
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 15
+text = "1"
+horizontal_alignment = 1
+
+[node name="Panel2" type="Panel" parent="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(70, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="TextRefreshPrice" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer/Panel2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -11.0
+offset_right = 37.5
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 15
+text = "刷新价格："
+
+[node name="Panel5" type="Panel" parent="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(20, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="RefreshPrice" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer/Panel5"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -9.0
+offset_top = -11.0
+offset_right = 9.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 15
+text = "10"
+horizontal_alignment = 1
+
+[node name="UpGradationButton" type="Button" parent="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+visible = false
+layout_mode = 2
+text = "升级"
+
+[node name="RefreshButton" type="Button" parent="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+visible = false
+layout_mode = 2
+text = "刷新"
+
+[node name="LockButton" type="Button" parent="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+visible = false
+layout_mode = 2
+text = "锁定"
+
+[node name="FixedDebuffHBoxContainer" type="HBoxContainer" parent="PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="FixedDebuffEquipBackPanel1" type="Panel" parent="PanelContainer/HBoxContainer/VBoxContainer/FixedDebuffHBoxContainer"]
+custom_minimum_size = Vector2(190, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="FixedDebuffVBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer/VBoxContainer/FixedDebuffHBoxContainer/FixedDebuffEquipBackPanel1"]
+custom_minimum_size = Vector2(190, 200)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -95.0
+offset_top = -100.0
+offset_right = 95.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/HBoxContainer/VBoxContainer/FixedDebuffHBoxContainer/FixedDebuffEquipBackPanel1/FixedDebuffVBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="FixedDebuffImagePanel" type="Panel" parent="PanelContainer/HBoxContainer/VBoxContainer/FixedDebuffHBoxContainer/FixedDebuffEquipBackPanel1/FixedDebuffVBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="FixedDebuffImage" type="TextureRect" parent="PanelContainer/HBoxContainer/VBoxContainer/FixedDebuffHBoxContainer/FixedDebuffEquipBackPanel1/FixedDebuffVBoxContainer/HBoxContainer/FixedDebuffImagePanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -30.0
+offset_top = -30.0
+offset_right = 30.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+texture = ExtResource("2_vliyf")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer/VBoxContainer/FixedDebuffHBoxContainer/FixedDebuffEquipBackPanel1/FixedDebuffVBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="FixedDebuffnameLabel" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer/FixedDebuffHBoxContainer/FixedDebuffEquipBackPanel1/FixedDebuffVBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 20
+text = "测试名称"
+
+[node name="FixedDebuffTypeLabel" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer/FixedDebuffHBoxContainer/FixedDebuffEquipBackPanel1/FixedDebuffVBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 15
+text = "测试类别"
+
+[node name="FixedDebuffEffectLabel" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer/FixedDebuffHBoxContainer/FixedDebuffEquipBackPanel1/FixedDebuffVBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+text = "测试装备效果"
+
+[node name="FixedDebuffEquipBackPanel2" type="Panel" parent="PanelContainer/HBoxContainer/VBoxContainer/FixedDebuffHBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(190, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="FixedDebuffVBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer/VBoxContainer/FixedDebuffHBoxContainer/FixedDebuffEquipBackPanel2"]
+custom_minimum_size = Vector2(190, 200)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -95.0
+offset_top = -100.0
+offset_right = 95.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/HBoxContainer/VBoxContainer/FixedDebuffHBoxContainer/FixedDebuffEquipBackPanel2/FixedDebuffVBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="FixedDebuffImagePanel" type="Panel" parent="PanelContainer/HBoxContainer/VBoxContainer/FixedDebuffHBoxContainer/FixedDebuffEquipBackPanel2/FixedDebuffVBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="FixedDebuffImage" type="TextureRect" parent="PanelContainer/HBoxContainer/VBoxContainer/FixedDebuffHBoxContainer/FixedDebuffEquipBackPanel2/FixedDebuffVBoxContainer/HBoxContainer/FixedDebuffImagePanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -30.0
+offset_top = -30.0
+offset_right = 30.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+texture = ExtResource("2_vliyf")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer/VBoxContainer/FixedDebuffHBoxContainer/FixedDebuffEquipBackPanel2/FixedDebuffVBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="FixedDebuffnameLabel" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer/FixedDebuffHBoxContainer/FixedDebuffEquipBackPanel2/FixedDebuffVBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 20
+text = "测试名称"
+
+[node name="FixedDebuffTypeLabel" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer/FixedDebuffHBoxContainer/FixedDebuffEquipBackPanel2/FixedDebuffVBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 15
+text = "测试类别"
+
+[node name="FixedDebuffEffectLabel" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer/FixedDebuffHBoxContainer/FixedDebuffEquipBackPanel2/FixedDebuffVBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+text = "测试装备效果"
+
+[node name="FixedDebuffEquipBackPanel3" type="Panel" parent="PanelContainer/HBoxContainer/VBoxContainer/FixedDebuffHBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(190, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="FixedDebuffVBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer/VBoxContainer/FixedDebuffHBoxContainer/FixedDebuffEquipBackPanel3"]
+custom_minimum_size = Vector2(190, 200)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -95.0
+offset_top = -100.0
+offset_right = 95.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/HBoxContainer/VBoxContainer/FixedDebuffHBoxContainer/FixedDebuffEquipBackPanel3/FixedDebuffVBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="FixedDebuffImagePanel" type="Panel" parent="PanelContainer/HBoxContainer/VBoxContainer/FixedDebuffHBoxContainer/FixedDebuffEquipBackPanel3/FixedDebuffVBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="FixedDebuffImage" type="TextureRect" parent="PanelContainer/HBoxContainer/VBoxContainer/FixedDebuffHBoxContainer/FixedDebuffEquipBackPanel3/FixedDebuffVBoxContainer/HBoxContainer/FixedDebuffImagePanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -30.0
+offset_top = -30.0
+offset_right = 30.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+texture = ExtResource("2_vliyf")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer/VBoxContainer/FixedDebuffHBoxContainer/FixedDebuffEquipBackPanel3/FixedDebuffVBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="FixedDebuffnameLabel" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer/FixedDebuffHBoxContainer/FixedDebuffEquipBackPanel3/FixedDebuffVBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 20
+text = "测试名称"
+
+[node name="FixedDebuffTypeLabel" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer/FixedDebuffHBoxContainer/FixedDebuffEquipBackPanel3/FixedDebuffVBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 15
+text = "测试类别"
+
+[node name="FixedDebuffEffectLabel" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer/FixedDebuffHBoxContainer/FixedDebuffEquipBackPanel3/FixedDebuffVBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+text = "测试装备效果"
+
+[node name="FixedDebuffEquipBackPanel4" type="Panel" parent="PanelContainer/HBoxContainer/VBoxContainer/FixedDebuffHBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(190, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="FixedDebuffVBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer/VBoxContainer/FixedDebuffHBoxContainer/FixedDebuffEquipBackPanel4"]
+custom_minimum_size = Vector2(190, 200)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -95.0
+offset_top = -100.0
+offset_right = 95.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/HBoxContainer/VBoxContainer/FixedDebuffHBoxContainer/FixedDebuffEquipBackPanel4/FixedDebuffVBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="FixedDebuffImagePanel" type="Panel" parent="PanelContainer/HBoxContainer/VBoxContainer/FixedDebuffHBoxContainer/FixedDebuffEquipBackPanel4/FixedDebuffVBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="FixedDebuffImage" type="TextureRect" parent="PanelContainer/HBoxContainer/VBoxContainer/FixedDebuffHBoxContainer/FixedDebuffEquipBackPanel4/FixedDebuffVBoxContainer/HBoxContainer/FixedDebuffImagePanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -30.0
+offset_top = -30.0
+offset_right = 30.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+texture = ExtResource("2_vliyf")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer/VBoxContainer/FixedDebuffHBoxContainer/FixedDebuffEquipBackPanel4/FixedDebuffVBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="FixedDebuffnameLabel" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer/FixedDebuffHBoxContainer/FixedDebuffEquipBackPanel4/FixedDebuffVBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 20
+text = "测试名称"
+
+[node name="FixedDebuffTypeLabel" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer/FixedDebuffHBoxContainer/FixedDebuffEquipBackPanel4/FixedDebuffVBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 15
+text = "测试类别"
+
+[node name="FixedDebuffEffectLabel" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer/FixedDebuffHBoxContainer/FixedDebuffEquipBackPanel4/FixedDebuffVBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+text = "测试装备效果"
+
+[node name="FixedDebuffEquipBackPanel5" type="Panel" parent="PanelContainer/HBoxContainer/VBoxContainer/FixedDebuffHBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(190, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="FixedDebuffVBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer/VBoxContainer/FixedDebuffHBoxContainer/FixedDebuffEquipBackPanel5"]
+custom_minimum_size = Vector2(190, 200)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -95.0
+offset_top = -100.0
+offset_right = 95.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/HBoxContainer/VBoxContainer/FixedDebuffHBoxContainer/FixedDebuffEquipBackPanel5/FixedDebuffVBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="FixedDebuffImagePanel" type="Panel" parent="PanelContainer/HBoxContainer/VBoxContainer/FixedDebuffHBoxContainer/FixedDebuffEquipBackPanel5/FixedDebuffVBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="FixedDebuffImage" type="TextureRect" parent="PanelContainer/HBoxContainer/VBoxContainer/FixedDebuffHBoxContainer/FixedDebuffEquipBackPanel5/FixedDebuffVBoxContainer/HBoxContainer/FixedDebuffImagePanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -30.0
+offset_top = -30.0
+offset_right = 30.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+texture = ExtResource("2_vliyf")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer/VBoxContainer/FixedDebuffHBoxContainer/FixedDebuffEquipBackPanel5/FixedDebuffVBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="FixedDebuffnameLabel" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer/FixedDebuffHBoxContainer/FixedDebuffEquipBackPanel5/FixedDebuffVBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 20
+text = "测试名称"
+
+[node name="FixedDebuffTypeLabel" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer/FixedDebuffHBoxContainer/FixedDebuffEquipBackPanel5/FixedDebuffVBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 15
+text = "测试类别"
+
+[node name="FixedDebuffEffectLabel" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer/FixedDebuffHBoxContainer/FixedDebuffEquipBackPanel5/FixedDebuffVBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+text = "测试装备效果"
+
+[node name="FixedDebuffEquipBackPanel6" type="Panel" parent="PanelContainer/HBoxContainer/VBoxContainer/FixedDebuffHBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(190, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="FixedDebuffVBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer/VBoxContainer/FixedDebuffHBoxContainer/FixedDebuffEquipBackPanel6"]
+custom_minimum_size = Vector2(190, 200)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -95.0
+offset_top = -100.0
+offset_right = 95.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/HBoxContainer/VBoxContainer/FixedDebuffHBoxContainer/FixedDebuffEquipBackPanel6/FixedDebuffVBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="FixedDebuffImagePanel" type="Panel" parent="PanelContainer/HBoxContainer/VBoxContainer/FixedDebuffHBoxContainer/FixedDebuffEquipBackPanel6/FixedDebuffVBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="FixedDebuffImage" type="TextureRect" parent="PanelContainer/HBoxContainer/VBoxContainer/FixedDebuffHBoxContainer/FixedDebuffEquipBackPanel6/FixedDebuffVBoxContainer/HBoxContainer/FixedDebuffImagePanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -30.0
+offset_top = -30.0
+offset_right = 30.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+texture = ExtResource("2_vliyf")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer/VBoxContainer/FixedDebuffHBoxContainer/FixedDebuffEquipBackPanel6/FixedDebuffVBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="FixedDebuffnameLabel" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer/FixedDebuffHBoxContainer/FixedDebuffEquipBackPanel6/FixedDebuffVBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 20
+text = "测试名称"
+
+[node name="FixedDebuffTypeLabel" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer/FixedDebuffHBoxContainer/FixedDebuffEquipBackPanel6/FixedDebuffVBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 15
+text = "测试类别"
+
+[node name="FixedDebuffEffectLabel" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer/FixedDebuffHBoxContainer/FixedDebuffEquipBackPanel6/FixedDebuffVBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+text = "测试装备效果"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Panel4" type="Panel" parent="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(240, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="RandomDebuffShop" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer2/Panel4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -108.0
+offset_top = -21.0
+offset_right = 108.0
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 30
+text = "随机增加debuff"
+
+[node name="Panel" type="Panel" parent="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(70, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="TextShopLevel" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer2/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -11.0
+offset_right = 37.5
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 15
+text = "商店等级："
+
+[node name="Panel3" type="Panel" parent="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(20, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="RandomDebuffShopLevel" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer2/Panel3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.5
+offset_top = -11.0
+offset_right = 4.5
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 15
+text = "1"
+horizontal_alignment = 1
+
+[node name="Panel2" type="Panel" parent="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(100, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="TextRefreshPrice" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer2/Panel2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -11.0
+offset_right = 37.5
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 15
+text = "刷新价格："
+
+[node name="Panel5" type="Panel" parent="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(20, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="RefreshPriceLabel" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer2/Panel5"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -9.0
+offset_top = -11.0
+offset_right = 9.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 15
+text = "10"
+horizontal_alignment = 1
+
+[node name="Panel8" type="Panel" parent="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(100, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="TextUpgradePrice" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer2/Panel8"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -11.0
+offset_right = 37.5
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 15
+text = "升级价格："
+
+[node name="Panel9" type="Panel" parent="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(20, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="UpgradePriceLabel" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer2/Panel9"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -9.0
+offset_top = -11.0
+offset_right = 9.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 15
+text = "10"
+horizontal_alignment = 1
+
+[node name="UpGradationButton" type="Button" parent="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "升级"
+
+[node name="RefreshButton" type="Button" parent="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "刷新"
+
+[node name="LockButton" type="Button" parent="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer2"]
+visible = false
+layout_mode = 2
+text = "锁定"
+
+[node name="Panel6" type="Panel" parent="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(120, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="TextCursePoint" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer2/Panel6"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -11.0
+offset_right = 37.5
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 15
+text = "剩余需要诅咒点："
+
+[node name="Panel7" type="Panel" parent="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="TextCursePoint" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer2/Panel7"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.5
+offset_top = -11.0
+offset_right = 4.5
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 15
+text = "1"
+horizontal_alignment = 1
+
+[node name="RandomDebuffHBoxContainer" type="HBoxContainer" parent="PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Control" type="Control" parent="PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Panel4" type="Panel" parent="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(280, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="TextAlreadyDebuffShop" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer3/Panel4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -108.0
+offset_top = -21.0
+offset_right = 108.0
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 30
+text = "已经拥有的debuff"
+
+[node name="Panel" type="Panel" parent="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(100, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="TextTotalCursePoint" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer3/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -11.0
+offset_right = 37.5
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 15
+text = "累计诅咒点："
+
+[node name="Panel3" type="Panel" parent="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(20, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="TextTotalCursePoint" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer3/Panel3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.5
+offset_top = -11.0
+offset_right = 4.5
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 15
+text = "1"
+horizontal_alignment = 1
+
+[node name="Panel2" type="Panel" parent="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer3"]
+visible = false
+custom_minimum_size = Vector2(70, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="TextRefreshPrice" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer3/Panel2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -11.0
+offset_right = 37.5
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 15
+text = "刷新价格："
+
+[node name="Panel5" type="Panel" parent="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer3"]
+visible = false
+custom_minimum_size = Vector2(20, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="RefreshPrice" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer3/Panel5"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -9.0
+offset_top = -11.0
+offset_right = 9.0
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 15
+text = "10"
+horizontal_alignment = 1
+
+[node name="UpGradationButton" type="Button" parent="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer3"]
+visible = false
+layout_mode = 2
+text = "升级"
+
+[node name="RefreshButton" type="Button" parent="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer3"]
+visible = false
+layout_mode = 2
+text = "刷新"
+
+[node name="LockButton" type="Button" parent="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer3"]
+visible = false
+layout_mode = 2
+text = "锁定"
+
+[node name="AlreadydebuffHBoxContainer" type="HBoxContainer" parent="PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="PanelContainer2" type="PanelContainer" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 487.0
+offset_top = 3.0
+offset_right = 763.0
+offset_bottom = 496.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="Panel" type="Panel" parent="PanelContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(120, 40)
+layout_mode = 2
+
+[node name="BossAttributeLabel" type="Label" parent="PanelContainer2/VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = -21.0
+offset_right = 60.0
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Boss属性"
+
+[node name="PanelContainer3" type="PanelContainer" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 399.0
+offset_top = 513.0
+offset_right = 763.0
+offset_bottom = 1006.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer3"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="Panel" type="Panel" parent="PanelContainer3/VBoxContainer"]
+custom_minimum_size = Vector2(60, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="PanelContainer3/VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -30.0
+offset_top = -21.0
+offset_right = 30.0
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "奖励"
+
+[node name="NextButton" type="Button" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 764.0
+offset_top = 2.0
+offset_right = 902.0
+offset_bottom = 52.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 30
+text = "回到商店"
+
+[node name="NextLevel" type="Button" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 764.0
+offset_top = 69.0
+offset_right = 902.0
+offset_bottom = 119.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 30
+text = "下一关"
+
+[node name="PanelContainer4" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(100, 50)
+offset_right = 254.0
+offset_bottom = 64.0
+size_flags_horizontal = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer4"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer4/VBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="PanelContainer4/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer4/VBoxContainer/HBoxContainer/Panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 20
+text = "剩余金钱："
+
+[node name="Panel2" type="Panel" parent="PanelContainer4/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+
+[node name="MoneyLabel" type="Label" parent="PanelContainer4/VBoxContainer/HBoxContainer/Panel2"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 20
+text = "666"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="PanelContainer4/VBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="PanelContainer4/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(320, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer4/VBoxContainer/HBoxContainer2/Panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 20
+text = "随机debuff商店剩余免费刷新次数："
+
+[node name="Panel2" type="Panel" parent="PanelContainer4/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+
+[node name="FreeRefreshLabel" type="Label" parent="PanelContainer4/VBoxContainer/HBoxContainer2/Panel2"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 20
+text = "666"
+
+[connection signal="pressed" from="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer2/UpGradationButton" to="." method="_on_up_gradation_button_pressed"]
+[connection signal="pressed" from="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer2/RefreshButton" to="." method="_on_refresh_button_pressed"]
+[connection signal="pressed" from="NextButton" to="." method="_on_next_button_pressed"]
+[connection signal="pressed" from="NextLevel" to="." method="_on_next_level_pressed"]

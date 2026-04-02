@@ -1,0 +1,35 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Minesweeppertest2wucha"
+run/main_scene="res://Main/start_interface.tscn"
+config/features=PackedStringArray("4.2", "GL Compatibility")
+boot_splash/bg_color=Color(0.111743, 0.0526343, 0.0143211, 1)
+config/icon="res://icon.svg"
+
+[autoload]
+
+SceneChanger="*res://Main/scene_changer.tscn"
+LoadSource="*res://scripts/load_source.gd"
+Playerdata="*res://scripts/playerdata.gd"
+
+[display]
+
+window/size/viewport_width=600
+window/size/viewport_height=600
+window/size/mode=2
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.140447, 0.140447, 0.140447, 1)

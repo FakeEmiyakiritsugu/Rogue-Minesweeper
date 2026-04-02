@@ -1,0 +1,108 @@
+[gd_scene load_steps=2 format=3 uid="uid://b460brw6mm5sm"]
+
+[ext_resource type="Script" path="res://scripts/start_interface.gd" id="1_n8ui6"]
+
+[node name="StartInterface" type="Node"]
+script = ExtResource("1_n8ui6")
+
+[node name="StartUI" type="CanvasLayer" parent="."]
+
+[node name="PanelContainer" type="PanelContainer" parent="StartUI"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="StartUI/PanelContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="TitlePanel" type="Panel" parent="StartUI/PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[node name="TextTitle" type="Label" parent="StartUI/PanelContainer/VBoxContainer/TitlePanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -68.5
+offset_right = 200.0
+offset_bottom = 68.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 100
+text = "肉鸽扫雷"
+
+[node name="StartPanel" type="Panel" parent="StartUI/PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+
+[node name="StartButton" type="Button" parent="StartUI/PanelContainer/VBoxContainer/StartPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -104.0
+offset_top = -38.5
+offset_right = 104.0
+offset_bottom = 38.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 50
+text = "开始新游戏"
+
+[node name="ContinuePanel" type="Panel" parent="StartUI/PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+
+[node name="ContinueButton" type="Button" parent="StartUI/PanelContainer/VBoxContainer/ContinuePanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -104.0
+offset_top = -38.5
+offset_right = 104.0
+offset_bottom = 38.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 50
+text = "继续游戏"
+
+[node name="EndPanel" type="Panel" parent="StartUI/PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+
+[node name="EndButton" type="Button" parent="StartUI/PanelContainer/VBoxContainer/EndPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -104.0
+offset_top = -38.5
+offset_right = 104.0
+offset_bottom = 38.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 50
+text = "结束游戏"
+
+[connection signal="pressed" from="StartUI/PanelContainer/VBoxContainer/StartPanel/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="StartUI/PanelContainer/VBoxContainer/ContinuePanel/ContinueButton" to="." method="_on_continue_button_pressed"]
+[connection signal="pressed" from="StartUI/PanelContainer/VBoxContainer/EndPanel/EndButton" to="." method="_on_end_button_pressed"]
