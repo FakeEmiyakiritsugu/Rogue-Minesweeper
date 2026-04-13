@@ -45,7 +45,7 @@ const SAVE_FILE_PATH = SAVE_PATH+"/save_data.tres"#存储文件的路径
 @export var question_mark_grid = 1#问号格子：默认为1，至少为1，问号格是不提供线索的线索格
 @export var black_grid = 1#黑色格：默认为1，至少为1，黑色格如果猜错会额外扣1点血
 @export var poison_grid = 1#毒格：默认为0，至少为0，毒格如果猜错增加一层中毒
-@export var treasure_grid = 1#宝藏格：默认为1，至少为0，宝藏格猜对了将给予奖励，奖励包括5金币，消耗品
+@export var treasure_grid = 1#宝藏格：默认为1，至少为0，宝藏格猜对了将给予奖励，奖励包括5金币，消耗品（消耗品还未完成）
 #下面的还未生效
 @export var red_thunder = 1#红雷：默认为1，至少为0，红雷猜错多扣一点血
 @export var poison_thunder = 1#毒雷：默认为1，至少为0，毒雷猜错加一层毒
