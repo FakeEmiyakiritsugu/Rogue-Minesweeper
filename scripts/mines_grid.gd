@@ -77,20 +77,7 @@ const DEFAULT_LAYER = 0#默认图层
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	#clear_layer((DEFAULT_LAYER))
-	
-	#for i in rows:#创建地图
-		#for j in columns:
-			##var cell_coord = Vector2(4*(i-rows/2),4*(j-columns/2))
-			#var cell_coord = Vector2((i-rows/2),(j-columns/2))
-			#set_tile_cell(cell_coord,"DEFAULT")
-			#pass
-	#place_mines()#测试放置雷
-	#place_space()#放置初始的空格线索
-	##set_tile_cell(Vector2(0,0),"DEFAULT")
-	#pass # Replace with function body.
-	
-	#loadsave_data()
+
 	Playerdata.loadsave_data()#加载数据
 	if Playerdata.game_run_flag == 0:#新关卡
 		create_new_map()
@@ -243,14 +230,18 @@ func create_new_map():#开始新的一关
 
 func start_buff_effect():#初始化时的buff作用
 	var open_treasure = 0
-	for id in Playerdata.already_buff:
+	for id in Playerdata.already_buff:#挖矿工人衬衫
 		if id == 6:
 			open_treasure = Playerdata.already_buff[id]
 	for i in range(Playerdata.rows):#遍历
 		for j in range(Playerdata.columns):
 			if Playerdata.cells_with_special_grid[i][j] == "treasure" and open_treasure>0:
 				open_treasure -= 1
-				handle_cells(from_ij_to_cell_coord(i,j),0)
+				var clicked_cell_coord = from_ij_to_cell_coord(i,j)
+				if Playerdata.cells_with_mines.any(func (cell):return cell.x ==  clicked_cell_coord.x && cell.y == clicked_cell_coord.y):#只要有一个雷与点击的地块一样就返回true:
+					place_flag(clicked_cell_coord)
+				else:
+					on_cell_clicked(clicked_cell_coord)
 	pass
 
 func from_ij_to_cell_coord(i:int,j:int):#将ij转换为tilemap中的坐标
